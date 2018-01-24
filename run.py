@@ -22,7 +22,7 @@ while True:
 		print("Please input your private key")
 		p2 = input()
 		for i in range(0,len(users)):
-			if p == users[i][0] and p2 == users[i][1]:
+			if p == users[i][1] and p2 == users[i][0]:
 				current_user = users[i]
 				current_index = i
 				print("Login Successful")
