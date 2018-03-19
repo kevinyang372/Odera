@@ -6,6 +6,7 @@ from ecdsa import SigningKey
 import hashlib
 import random
 
+# create a new user in the network
 class NewUsers:
 	def __init__(self):
 		self.private_key, self.public_key = generate_key()
@@ -32,7 +33,7 @@ class NewUsers:
 		self.temp_block.append(signature)
 		self.present_block.append(signature.hex())
 		self.tempencrypted_message.append(data)
-		
+
 	def ShowBlocks(self):
 		for i in self.blockchain:
 			print()

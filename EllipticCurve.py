@@ -5,13 +5,15 @@ from ecdsa.util import string_to_number, number_to_string
 import codecs
 import binascii
 
+#generate seed
 def random_secret():
     sk = SigningKey.generate(curve=SECP256k1)
     return sk
 
+#generate private and public key pair
 def generate_key():
     # Generate a new private key.
-    secret = random_secret() 
+    secret = random_secret()
     print("Private Key: ", secret.to_string().hex())
 
     public = secret.get_verifying_key()
